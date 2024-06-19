@@ -11,13 +11,11 @@ export async function getEncryptedData(supabaseProjectId, apikey) {
         });
 
         if (!response.ok) {
-            console.log(response);
             redirectOnError();
         }
 
         return await response.json();
     } catch (error) {
-        console.error(error);
         redirectOnError();
     }
 }
